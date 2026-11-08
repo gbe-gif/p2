@@ -182,6 +182,7 @@
   .lead-portrait,
   .cast-card .profile-portrait {
     width: min(100%, 230px);
+    margin-inline: auto;
   }
   .cast-card {
     grid-template-columns: minmax(0, 1fr);
