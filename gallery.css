@@ -1,0 +1,52 @@
+.gallery-cover { padding-block: 70px 40px; }
+.gallery-cover h1 { margin-top: 28px; font-size: clamp(42px, 6vw, 78px); }
+.gallery-index { display: flex; gap: 24px; border-top: 1px solid var(--rule); padding-top: 20px; }
+.gallery-index a { font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.gallery-content { padding-top: 65px; }
+.gallery-content h2 { font-size: clamp(28px, 4vw, 44px); }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  align-items: start;
+  gap: 16px;
+}
+.gallery-grid[hidden] { display: none; }
+.gallery-grid img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.gallery-restricted { margin-top: 65px; border-top: 1px solid var(--rule); padding-top: 40px; }
+.gallery-button {
+  min-height: 44px;
+  border: 1px solid var(--silver);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 10px 16px;
+  font: inherit;
+  cursor: pointer;
+}
+.gallery-button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+.gallery-button:disabled { opacity: .55; cursor: wait; }
+#password-dialog {
+  width: min(440px, calc(100% - 32px));
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--paper);
+  color: var(--ink);
+}
+#password-dialog::backdrop { background: rgb(33 35 38 / 60%); }
+#password-title { font-size: 22px; margin: 0 0 12px; }
+#password-hint, #password-error, #load-status { font-size: 14px; line-height: 1.7; }
+#password-error { color: var(--accent); margin: 10px 0 0; }
+#load-status { margin-top: 12px; }
+#gallery-password {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid var(--silver);
+  border-radius: 4px;
+  font: inherit;
+  color: var(--ink);
+  background: white;
+}
+.gallery-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
