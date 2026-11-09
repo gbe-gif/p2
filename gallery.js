@@ -7,6 +7,17 @@ const lock = document.querySelector('#lock');
 const lockedCopy = document.querySelector('#locked-copy');
 const grid = document.querySelector('#restricted-images');
 const status = document.querySelector('#load-status');
+const messages = document.documentElement.lang === 'en'
+  ? {
+      wrongPasscode: 'That passcode does not match.',
+      imageLabel: 'NSFW image',
+      loadError: 'Some images could not be loaded.'
+    }
+  : {
+      wrongPasscode: '비밀번호가 일치하지 않아요.',
+      imageLabel: '언세이프티 이미지',
+      loadError: '일부 이미지를 불러오지 못했어요.'
+    };
 
 // This is a visitor prompt. The encoded passcode is readable from the source.
 const passcode = atob('MDMxNmlhbg==');
@@ -34,7 +45,7 @@ form.addEventListener('submit', event => {
   event.preventDefault();
 
   if (input.value !== passcode) {
-    error.textContent = '비밀번호가 일치하지 않아요.';
+    error.textContent = messages.wrongPasscode;
     error.hidden = false;
     input.focus();
     return;
@@ -49,11 +60,11 @@ form.addEventListener('submit', event => {
 
   const images = Array.from({ length: 9 }, (_, index) => {
     const img = document.createElement('img');
-    img.alt = `언세이프티 이미지 ${index + 1}`;
+    img.alt = `${messages.imageLabel} ${index + 1}`;
     img.loading = 'lazy';
     img.decoding = 'async';
     img.addEventListener('error', () => {
-      if (img.isConnected) status.textContent = '일부 이미지를 불러오지 못했어요.';
+      if (img.isConnected) status.textContent = messages.loadError;
     });
     img.src = `https://gbe88.uk/P2/${index + 14}.webp`;
     return img;

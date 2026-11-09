@@ -127,4 +127,46 @@ footer p{font:italic 19px 'Playfair Display',serif;margin:10px 0 0}
 .nav-disabled small{display:none}
 footer{padding-bottom:110px}}
 
-
+.topbar-start {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 3vw, 32px);
+}
+.language-nav {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--muted);
+}
+.language-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+}
+.language-nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.language-nav [aria-disabled="true"] {
+  opacity: .7;
+}
+@media (max-width: 390px) {
+  .topbar {
+    padding-inline: 4%;
+  }
+  .topbar-start,
+  .language-nav {
+    gap: 7px;
+  }
+  .top-link {
+    letter-spacing: .08em;
+    white-space: nowrap;
+  }
+  .top-link span {
+    margin-left: 4px;
+  }
+}

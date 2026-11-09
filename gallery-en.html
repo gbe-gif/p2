@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9fafc">
+  <meta name="description" content="Images from the Beacon Society roleplay.">
+  <title>Image Gallery — THE BEACON SOCIETY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+  <script defer src="gallery.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-start"><a class="wordmark" href="index-en.html""><span class="mark">B</span><span>THE BEACON<br><small>SOCIETY</small></span></a><nav class="language-nav" aria-label="Language"><a href="gallery.html" lang="ko" hreflang="ko">한국어</a><a href="gallery-en.html" lang="en" hreflang="en" aria-current="page">Eng</a><span aria-disabled="true" title="Japanese coming soon">Jpn</span></nav></div>
+    <span class="top-note">BOSTON, MASSACHUSETTS <i>·</i> 2014</span>
+    <a class="top-link" href="index-en.html"#betting">THE WAGER <span>↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="section gallery-cover">
+        <p class="eyebrow"><span></span> 04 / IMAGE ARCHIVE</p>
+        <h1>Image Gallery</h1>
+        <nav class="gallery-index" aria-label="Image categories">
+          <a href="#public">All Ages</a>
+          <a href="#restricted">NSFW</a>
+        </nav>
+      </div>
+    </section>
+    <div class="section gallery-content">
+      <section id="public" aria-labelledby="public-title">
+        <p class="eyebrow"><span></span> PUBLIC COLLECTION</p>
+        <h2 id="public-title">All Ages</h2>
+        <div class="gallery-grid">
+          <img src="https://gbe88.uk/P2/1.webp" alt="All-ages image 1" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/2.webp" alt="All-ages image 2" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/3.webp" alt="All-ages image 3" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/4.webp" alt="All-ages image 4" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/5.webp" alt="All-ages image 5" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/6.webp" alt="All-ages image 6" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/7.webp" alt="All-ages image 7" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/8.webp" alt="All-ages image 8" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/9.webp" alt="All-ages image 9" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/10.webp" alt="All-ages image 10" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/11.webp" alt="All-ages image 11" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/12.webp" alt="All-ages image 12" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/13.webp" alt="All-ages image 13" loading="lazy" decoding="async">
+        </div>
+      </section>
+      <section class="gallery-restricted" id="restricted" aria-labelledby="restricted-title">
+        <p class="eyebrow"><span></span> RESTRICTED COLLECTION</p>
+        <h2 id="restricted-title">NSFW</h2>
+        <p class="bullet" id="locked-copy">Enter the passcode to view this collection.</p>
+        <button class="gallery-button" type="button" id="unlock">Enter passcode</button>
+        <button class="gallery-button" type="button" id="lock" hidden>Lock again</button>
+        <p id="load-status" role="status"></p>
+        <div class="gallery-grid" id="restricted-images" hidden></div>
+        <noscript><p class="bullet">JavaScript is required to check the passcode.</p></noscript>
+      </section>
+    </div>
+  </main>
+  <dialog id="password-dialog" aria-labelledby="password-title">
+    <form id="password-form">
+      <h2 id="password-title">View NSFW Images</h2>
+      <p id="password-hint">Please enter the passcode from the NSFW version's details.</p>
+      <label for="gallery-password">Passcode</label>
+      <input id="gallery-password" type="text" autocomplete="off" autocapitalize="off"
+             spellcheck="false" maxlength="128" aria-describedby="password-hint password-error" required autofocus>
+      <p id="password-error" role="alert" hidden></p>
+      <div class="gallery-actions">
+        <button type="button" class="gallery-button" id="cancel">Cancel</button>
+        <button type="submit" class="gallery-button primary" id="confirm">View images</button>
+      </div>
+    </form>
+  </dialog>
+  <footer><span class="footer-brand">THE BEACON SOCIETY</span><span>BOSTON, 2014<br>IMAGE ARCHIVE / 04</span></footer>
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <a href="index-en.html""><span>01</span> World</a>
+    <a href="characters-en.html""><span>02</span> Lead</a>
+    <a href="supporting-en.html""><span>03</span> Cast</a>
+    <a href="gallery-en.html"" class="active" aria-current="page"><span>04</span> Gallery</a>
+  </nav>
+</body>
+</html>
