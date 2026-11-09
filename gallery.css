@@ -50,3 +50,24 @@
   background: white;
 }
 .gallery-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+
+.gallery-bonus {
+  margin-top: 42px;
+  padding-top: 25px;
+  border-top: 1px solid var(--rule);
+}
+.gallery-bonus h3 {
+  margin: 0 0 20px;
+  font-size: clamp(22px, 3vw, 32px);
+}
+.gallery-bonus .gallery-grid {
+  max-width: 760px;
+}
+.gallery-bonus figure {
+  margin: 0;
+}
+.gallery-bonus figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
