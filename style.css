@@ -151,9 +151,6 @@ footer{padding-bottom:110px}}
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.language-nav [aria-disabled="true"] {
-  opacity: .7;
-}
 @media (max-width: 390px) {
   .topbar {
     padding-inline: 4%;
@@ -168,5 +165,20 @@ footer{padding-bottom:110px}}
   }
   .top-link span {
     margin-left: 4px;
+  }
+}
+
+:lang(ja) body {
+  word-break: normal;
+  line-break: strict;
+}
+:lang(ja) .hero h1,
+:lang(ja) .profile-title h1 {
+  font-size: clamp(36px, 5.5vw, 76px);
+}
+@media (max-width: 390px) {
+  :lang(ja) .top-link {
+    font-size: 8px;
+    letter-spacing: 0;
   }
 }

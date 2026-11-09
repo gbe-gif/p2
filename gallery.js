@@ -7,17 +7,24 @@ const lock = document.querySelector('#lock');
 const lockedCopy = document.querySelector('#locked-copy');
 const grid = document.querySelector('#restricted-images');
 const status = document.querySelector('#load-status');
-const messages = document.documentElement.lang === 'en'
-  ? {
-      wrongPasscode: 'That passcode does not match.',
-      imageLabel: 'NSFW image',
-      loadError: 'Some images could not be loaded.'
-    }
-  : {
-      wrongPasscode: '비밀번호가 일치하지 않아요.',
-      imageLabel: '언세이프티 이미지',
-      loadError: '일부 이미지를 불러오지 못했어요.'
-    };
+const localizedMessages = {
+  en: {
+    wrongPasscode: 'That passcode does not match.',
+    imageLabel: 'NSFW image',
+    loadError: 'Some images could not be loaded.'
+  },
+  ja: {
+    wrongPasscode: 'パスワードが一致しません。',
+    imageLabel: 'NSFW画像',
+    loadError: '一部の画像を読み込めませんでした。'
+  },
+  ko: {
+    wrongPasscode: '비밀번호가 일치하지 않아요.',
+    imageLabel: '언세이프티 이미지',
+    loadError: '일부 이미지를 불러오지 못했어요.'
+  }
+};
+const messages = localizedMessages[document.documentElement.lang] ?? localizedMessages.ko;
 
 // This is a visitor prompt. The encoded passcode is readable from the source.
 const passcode = atob('MDMxNmlhbg==');

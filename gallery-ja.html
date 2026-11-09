@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9fafc">
+  <meta name="description" content="ビーコン・ソサエティの収録画像。">
+  <title>収録画像 — THE BEACON SOCIETY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+  <script defer src="gallery.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-start"><a class="wordmark" href="index-ja.html""><span class="mark">B</span><span>THE BEACON<br><small>SOCIETY</small></span></a><nav class="language-nav" aria-label="言語選択"><a href="gallery.html" lang="ko" hreflang="ko">한국어</a><a href="gallery-en.html" lang="en" hreflang="en">Eng</a><a href="gallery-ja.html" lang="ja" hreflang="ja" aria-current="page">Jpn</a></nav></div>
+    <span class="top-note">マサチューセッツ州ボストン <i>·</i> 2014</span>
+    <a class="top-link" href="index-ja.html"#betting">パンダ・ウェイジャー <span>↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="section gallery-cover">
+        <p class="eyebrow"><span></span> 04 / 収録画像</p>
+        <h1>収録画像</h1>
+        <nav class="gallery-index" aria-label="画像の分類">
+          <a href="#public">全年齢向け</a>
+          <a href="#restricted">NSFW</a>
+        </nav>
+      </div>
+    </section>
+    <div class="section gallery-content">
+      <section id="public" aria-labelledby="public-title">
+        <p class="eyebrow"><span></span> 全年齢向けコレクション</p>
+        <h2 id="public-title">全年齢向け</h2>
+        <div class="gallery-grid">
+          <img src="https://gbe88.uk/P2/1.webp" alt="全年齢向け画像 1" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/2.webp" alt="全年齢向け画像 2" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/3.webp" alt="全年齢向け画像 3" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/4.webp" alt="全年齢向け画像 4" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/5.webp" alt="全年齢向け画像 5" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/6.webp" alt="全年齢向け画像 6" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/7.webp" alt="全年齢向け画像 7" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/8.webp" alt="全年齢向け画像 8" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/9.webp" alt="全年齢向け画像 9" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/10.webp" alt="全年齢向け画像 10" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/11.webp" alt="全年齢向け画像 11" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/12.webp" alt="全年齢向け画像 12" loading="lazy" decoding="async">
+          <img src="https://gbe88.uk/P2/13.webp" alt="全年齢向け画像 13" loading="lazy" decoding="async">
+        </div>
+      </section>
+      <section class="gallery-restricted" id="restricted" aria-labelledby="restricted-title">
+        <p class="eyebrow"><span></span> 閲覧制限付きコレクション</p>
+        <h2 id="restricted-title">NSFW</h2>
+        <p class="bullet" id="locked-copy">パスワードを入力すると閲覧できます。</p>
+        <button class="gallery-button" type="button" id="unlock">パスワードを入力</button>
+        <button class="gallery-button" type="button" id="lock" hidden>再ロック</button>
+        <p id="load-status" role="status"></p>
+        <div class="gallery-grid" id="restricted-images" hidden></div>
+        <noscript><p class="bullet">パスワードの確認にはJavaScriptが必要です。</p></noscript>
+      </section>
+    </div>
+  </main>
+  <dialog id="password-dialog" aria-labelledby="password-title">
+    <form id="password-form">
+      <h2 id="password-title">NSFW画像の閲覧</h2>
+      <p id="password-hint">NSFW版の詳細情報に記載されているパスワードを入力してください。</p>
+      <label for="gallery-password">パスワード</label>
+      <input id="gallery-password" type="text" autocomplete="off" autocapitalize="off"
+             spellcheck="false" maxlength="128" aria-describedby="password-hint password-error" required autofocus>
+      <p id="password-error" role="alert" hidden></p>
+      <div class="gallery-actions">
+        <button type="button" class="gallery-button" id="cancel">キャンセル</button>
+        <button type="submit" class="gallery-button primary" id="confirm">画像を見る</button>
+      </div>
+    </form>
+  </dialog>
+  <footer><span class="footer-brand">THE BEACON SOCIETY</span><span>ボストン、2014年<br>画像アーカイブ / 04</span></footer>
+  <nav class="bottom-nav" aria-label="メインメニュー">
+    <a href="index-ja.html""><span>01</span> 世界観</a>
+    <a href="characters-ja.html""><span>02</span> 主役</a>
+    <a href="supporting-ja.html""><span>03</span> 脇役</a>
+    <a href="gallery-ja.html"" class="active" aria-current="page"><span>04</span> 画像</a>
+  </nav>
+</body>
+</html>
