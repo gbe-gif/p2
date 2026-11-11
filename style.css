@@ -182,3 +182,67 @@ footer{padding-bottom:110px}}
     letter-spacing: 0;
   }
 }
+
+.schedule-link {
+  margin-inline-start: 20px;
+}
+.campus-schedule {
+  padding-block: 85px;
+}
+.schedule-years {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 6vw, 80px);
+  margin-top: 36px;
+}
+.schedule-year h3,
+.schedule-mission h3 {
+  font-size: clamp(22px, 2.8vw, 32px);
+  margin-bottom: 16px;
+}
+.schedule-events {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.schedule-events > li {
+  display: grid;
+  grid-template-columns: minmax(105px, 29%) minmax(0, 1fr);
+  gap: 12px;
+  padding-block: 16px;
+  border-top: 1px solid var(--rule);
+}
+.schedule-date {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--accent);
+}
+.schedule-events h4 {
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+.schedule-events .bullet {
+  margin-bottom: 0;
+}
+.schedule-mission {
+  margin-top: 35px;
+  padding: 24px;
+  background: var(--surface);
+}
+@media (max-width: 760px) {
+  .schedule-years {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .schedule-events > li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px;
+  }
+  .schedule-link {
+    margin-inline-start: 12px;
+    gap: 12px;
+  }
+}
